@@ -75,8 +75,8 @@ body {
 /* ------------------------------------------------------------- */
 
 main {
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 13px;
+    padding: 7px;
     width:550px;
     height:580px;
     border:2px solid black;
@@ -84,13 +84,13 @@ main {
     background-color: #333;
     color: #fff;
     display: inline-block;
-    margin-top: 3%;
+    margin-top: 1%;
     position: relative;
 }
 
 .pokemonImage {
     position: absolute;
-    bottom: 40%;
+    bottom: 28%;
     left: 50%;
     transform: translateX(-50%);
     max-height: 60%;
@@ -99,7 +99,33 @@ main {
 .pokemonDados {
     position: absolute;
     font-weight: 600;
-    color: #f1e7e7;
-    top: 60%;
-    right: 37%;
+    color: #252323;
+    top: 70%;
+    right: 15%;
   }
+
+#cor {
+    border-radius: 13px;
+    padding: 0px;
+    width:545px;
+    height:575px;
+    border:2px solid black;
+    box-sizing: border-box;
+    background-color: #fffefe;
+    color: #fff;
+    position: relative;
+}
+
+#cor2 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width:541px;
+    height:280px;
+    box-sizing: border-box;
+    background-color: #ff0000;
+    color: #fff;    
+}
+
+.teste {
+    background-color: #0fe61d;
+}
