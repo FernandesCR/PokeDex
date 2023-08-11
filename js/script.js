@@ -4,6 +4,7 @@ const pokemonNumber = document.querySelectorAll('.pokemonNumber');
 const pokemonName = document.querySelectorAll('.pokemonName');
 const pokemonImage = document.querySelector('.pokemonImage');
 const btnShiny = document.getElementById('btnShiny');
+const btnNormal= document.getElementById('btnNormal');
 const input = document.querySelector('.search');
 const form = document.querySelector('.form');
 
@@ -44,7 +45,7 @@ const renderPokemon = async (pokemon) => {
         break;
       }
     }
-    
+
     dadosAtualSave = dados;
 
     pokemonImage.src = dados.sprites.other['official-artwork'].front_default;
@@ -61,7 +62,7 @@ const renderPokemon = async (pokemon) => {
 
   } else {
     pokemonName.innerHTML = 'Pokemon não encontrado :c ';
-    pokemonNumber.innerHTML = ''; 
+    pokemonNumber.innerHTML = '';
   }
 
   const renderShiny = () => {
@@ -69,10 +70,19 @@ const renderPokemon = async (pokemon) => {
       pokemonImage.src = dadosAtualSave.sprites.other['official-artwork'].front_shiny;
     }
   };
-  
+
   btnShiny.addEventListener('click', () => {
     renderShiny();
   });
+
+  const renderNormal = () => {
+    if (dadosAtualSave)
+      pokemonImage.src = dados.sprites.other['official-artwork'].front_default;
+  };
+  btnNormal.addEventListener('click', () => {
+    renderNormal();
+  });
+
 
 };
 
@@ -80,9 +90,9 @@ const renderTypeOrTypes = (pokemonTipos) => {
   const tipoName = document.getElementById('tipos');
 
   if (pokemonTipos.length === 1) {
-    tipoName.innerHTML = 'Type';
+    tipoName.innerHTML = 'Tipo';
   } else if (pokemonTipos.length > 1) {
-    tipoName.innerHTML = 'Types';
+    tipoName.innerHTML = 'Tipos';
   }
 };
 
