@@ -49,11 +49,11 @@ body {
 /* Pesquisa */
 .nav-search {
     flex: 3;
-    text-align: right;
+    text-align: center;
 }
 
 .nav-search input {
-    padding: 5px;
+    padding: 10px;
     width: 200px;
     border: none;
     border-radius: 5px;
@@ -61,7 +61,7 @@ body {
 }
 
 .nav-search button {
-    padding: 5px 10px;
+    padding: 10 px 10px;
     background-color: #555;
     color: #fff;
     border: none;
@@ -163,5 +163,22 @@ main {
 }
 
 #btnShiny:hover {
+    background-color: #777;
+}
+
+#btnNormal {
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+    transform: translateX(-50%);
+}
+
+#btnNormal:hover {
     background-color: #777;
 }
