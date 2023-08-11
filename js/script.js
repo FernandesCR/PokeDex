@@ -9,20 +9,24 @@ const input = document.querySelector('.search');
 const form = document.querySelector('.form');
 
 const colors = {
-  grass: '#0fe61d',
-  fire: '#ff0000',
+  grass: '#63BB5B',
+  fire: '#FF9C54',
   electric: '#ffd500',
-  water: '#13b3fd',
+  water: '#4D90D5',
   ground: '#ffc388',
-  rock: '#d5d5d4',
-  fairy: '#fceaff',
-  poison: '#98d7a5',
-  bug: '#f8d5a3',
-  dragon: '#97b3e6',
-  psychic: '#eaeda1',
-  flying: '#F5F5F5',
-  fighting: '#E6E0D4',
-  normal: '#F5F5F5'
+  rock: '#C7B78B',
+  fairy: '#EC8FE6',
+  poison: '#AB6AC8',
+  bug: '#90C12C',
+  dragon: '#7766EE',
+  psychic: '#F97176',
+  flying: '#92AADE',
+  fighting: '#CE4069',
+  normal: '#969ea5',
+  ghost: '#5269AC',
+  steel: '#5A8EA1',
+  dark: '#5A5366',
+  ice: '#74CEC0',
 };
 
 let dadosAtualSave = null;
@@ -35,13 +39,17 @@ const pokemonFetch = async (pokemon) => {
 
 const renderPokemon = async (pokemon) => {
   const dados = await pokemonFetch(pokemon);
-  const cor = document.getElementById('cor2');
+  const cor2 = document.getElementById('cor2');
+  const cor = document.getElementById('cor');
+  const container = document.getElementById('container');
 
   if (dados) {
     const pokemonTipos = dados.types.map(type => type.type.name);
     for (const type of pokemonTipos) {
       if (colors[type]) {
-        cor.style.backgroundColor = colors[type];
+        container.style.border = `2px solid ${colors[type]}`;
+        cor.style.border = `2px solid ${colors[type]}`;
+        cor2.style.backgroundColor = colors[type];
         break;
       }
     }

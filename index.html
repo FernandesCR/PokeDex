@@ -12,17 +12,25 @@
 <body>
 
     <section name="navBar">
-
         <div>
             <nav class="navbar">
                 <div class="nav-logo">
                     <a href="index.html"><img src="imagens/pokebola.gif" alt="Logo"></a>
                 </div>
+                <ul class="nav-menu">
+                    <li><a href="#">PokeDex</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tipos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Categoria 1</a></li>
+                            <li><a href="#">Categoria 2</a></li>
+                            <li><a href="#">Categoria 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
         </div>
-
     </section>
-
 
     <section>
         <div class="nav-search">
@@ -39,11 +47,8 @@
                 <img src="" alt="pokemon" class="pokemonImage">
 
                 <h1 class="pokemonDados">
-                    <span class="pokemonNumber"></span> -
                     <span class="pokemonName"></span>
                 </h1>
-                <button id="btnShiny">Shiny</button>
-                <button id="btnNormal">Normal</button>
                 <div class="typeImages"></div>
 
             </div>
@@ -55,9 +60,19 @@
     <section>
 
         <div id="container">
-            <h1 class="pokemonName">4</h1>
-            <h1 id="tipos"></h1>
-            <div class="typeImagesName"></div>
+            <div id="NameBloco">
+                <h1 class="pokemonNumber"></h1> -
+                <h1 class="pokemonName"></h1> 
+            </div>
+            <div>
+                <h1 id="tipos"></h1>
+                <div class="typeImagesName"></div>
+            </div>
+            <div>
+                <h1>Formas</h1>
+                <button id="btnShiny">Shiny</button>
+                <button id="btnNormal">Normal</button>
+            </div>
         </div>
 
     </section>
