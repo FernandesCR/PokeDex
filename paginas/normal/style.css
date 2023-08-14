@@ -99,3 +99,57 @@ body {
 }
 
 /* --- */
+
+
+.pokeCard {
+    width: 150px;
+    height: 200px;
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 30px;
+    margin-left: 30px;
+    display: inline-block;
+}
+.idPokemon,
+.namePokemon,
+.typePokemon {
+    margin-top: 7px;
+}
+
+
+
+.sectionCard {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+/* ... Outras regras de estilo ... */
+
+.sectionCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.pokeCard {
+    width: calc(33.33% - 20px);
+    max-width: 150px;
+    height: auto;
+    border-radius: 15px;
+    background-color: #969ea5;
+    color: #fff;
+    margin-top: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.pokemonImage {
+    max-width: 30px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
