@@ -10,7 +10,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-    background: linear-gradient(to bottom, #c5c4c4, #fffefe);
+    background: linear-gradient(to bottom, #696262, #f17070);
     min-height: 101vh;
     font-family: 'Oxanium', cursive;
 }
@@ -141,7 +141,7 @@ body {
     max-width: 150px;
     height: auto;
     border-radius: 15px;
-    background-color: #969ea5;
+    background-color: #bd2929;
     color: #fff;
     margin-top: 30px;
     padding: 10px;

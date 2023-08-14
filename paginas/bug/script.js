@@ -7,7 +7,7 @@ const fetchPokemonData = async (pokemonURL) => {
 };
 
 const renderPokemon = async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/type/1');
+    const response = await fetch('https://pokeapi.co/api/v2/type/7');
     const data = await response.json();
     const normalTypePokemon = data.pokemon;
 
@@ -39,7 +39,6 @@ const renderPokemon = async () => {
         pokeCard.appendChild(namePokemon);
 
         const typeNames = pokemonInfo.types.map(type => type.type.name);
-
         for (const typeName of typeNames) {
             const typeImageName = document.createElement('img');
             typeImageName.src = `/imagens/tipos-nomes/${typeName}_en.png`;

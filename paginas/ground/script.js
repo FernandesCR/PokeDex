@@ -7,7 +7,7 @@ const fetchPokemonData = async (pokemonURL) => {
 };
 
 const renderPokemon = async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/type/1');
+    const response = await fetch('https://pokeapi.co/api/v2/type/5');
     const data = await response.json();
     const normalTypePokemon = data.pokemon;
 
