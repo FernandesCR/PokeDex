@@ -11,7 +11,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background: linear-gradient(to bottom, #c5c4c4, #fffefe);
-    min-height: 100vh;
+    min-height: 101vh;
     font-family: 'Oxanium', cursive;
 }
 
@@ -173,7 +173,7 @@ main {
 #cor2 {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    width: 541px;
+    width: 543px;
     height: 280px;
     box-sizing: border-box;
 }
@@ -292,22 +292,21 @@ li.pokemon-list-item {
     border-bottom: 1px solid #1a1818;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .pokemon-image {
+}
+
+.pokemon-image {
     width: 60px;
     height: 60px;
     margin-left: 10px;
-  }
-  
-  .pokemon-name {
+}
+
+.pokemon-name {
     flex: 1;
     text-align: center;
-  }
-  
-  li.pokemon-list-item:hover {
+}
+
+li.pokemon-list-item:hover {
     background-color: #c5c4c4;
     color: #fff;
     text-decoration: none;
-  }
-  
+}
