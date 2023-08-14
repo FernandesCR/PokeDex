@@ -4,7 +4,7 @@ const pokemonNumber = document.querySelectorAll('.pokemonNumber');
 const pokemonName = document.querySelectorAll('.pokemonName');
 const pokemonImage = document.querySelector('.pokemonImage');
 const btnShiny = document.getElementById('btnShiny');
-const btnNormal= document.getElementById('btnNormal');
+const btnNormal = document.getElementById('btnNormal');
 const input = document.querySelector('.search');
 const form = document.querySelector('.form');
 
@@ -67,10 +67,6 @@ const renderPokemon = async (pokemon) => {
     renderTypeImages(pokemonTipos);
     renderTypeImagesNames(pokemonTipos);
     renderTypeOrTypes(pokemonTipos);
-
-  } else {
-    pokemonName.innerHTML = 'Pokemon não encontrado :c ';
-    pokemonNumber.innerHTML = '';
   }
 
   const renderShiny = () => {
@@ -90,9 +86,8 @@ const renderPokemon = async (pokemon) => {
   btnNormal.addEventListener('click', () => {
     renderNormal();
   });
-
-
 };
+
 
 const renderTypeOrTypes = (pokemonTipos) => {
   const tipoName = document.getElementById('tipos');
@@ -104,15 +99,51 @@ const renderTypeOrTypes = (pokemonTipos) => {
   }
 };
 
+const pokemonListRender = async () => {
+  const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0`);
+  const dados = await APIResponse.json();
+  return dados.results;
+};
+
+const renderPokemonList = async () => {
+  const pokemonList = await pokemonListRender();
+  const list = document.getElementById('pokemonList');
+
+  for (const pokemon of pokemonList) {
+    const createListItem = document.createElement('li');
+    const createListImage = document.createElement('img');
+    const createListName = document.createElement('span');
+
+    createListName.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase();
+    createListName.classList.add('pokemon-name');
+    createListImage.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.url.split('/')[6]}.gif`;
+    createListImage.classList.add('pokemon-image');
+
+
+    createListItem.addEventListener('click', () => {
+      renderPokemon(pokemon.name);
+    });
+
+    createListItem.appendChild(createListImage);
+    createListItem.appendChild(createListName);
+    createListItem.classList.add('pokemon-list-item');
+    list.appendChild(createListItem);
+  }
+};
+
+
+renderPokemonList();
+
+
 const renderTypeImages = (types) => {
   typeImagesContainer.innerHTML = '';
 
   types.forEach(type => {
     const typeImage = document.createElement('img');
     typeImage.src = `imagens/tipos/Pokemon_Type_Icon_${type}.png`;
-    typeImage.style.width = '50px';
-    typeImage.style.height = '50px';
-    typeImage.style.marginRight = '10px';
+    typeImage.style.width = '60px';
+    typeImage.style.height = '60px';
+    typeImage.style.marginRight = '30px';
     typeImagesContainer.appendChild(typeImage);
   });
 };
