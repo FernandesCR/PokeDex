@@ -42,11 +42,17 @@ const renderPokemon = async (pokemon) => {
   const cor2 = document.getElementById('cor2');
   const cor = document.getElementById('cor');
   const container = document.getElementById('container');
+  const btnNormal = document.getElementById('btnNormal');
+  const btnShiny = document.getElementById('btnShiny');
 
   if (dados) {
     const pokemonTipos = dados.types.map(type => type.type.name);
     for (const type of pokemonTipos) {
       if (colors[type]) {
+        btnShiny.style.backgroundColor = colors[type];
+        btnShiny.style.boxShadow = colors[type];
+        btnNormal.style.backgroundColor = colors[type];
+        btnNormal.style.boxShadow = colors[type];
         container.style.border = `2px solid ${colors[type]}`;
         cor.style.border = `2px solid ${colors[type]}`;
         cor2.style.backgroundColor = colors[type];

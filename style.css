@@ -80,6 +80,7 @@ body {
     padding: 5px;
     border-radius: 0;
     margin: 0;
+    width: 100%;
 }
 
 .navbar a {
@@ -102,30 +103,53 @@ body {
 
 /* Pesquisa */
 .nav-search {
-    flex: 3;
-    text-align: center;
+    flex: 1;
+    margin-left: 44%;
     margin-top: 1%;
 }
 
-.nav-search input {
-    padding: 10px;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
 }
 
-.nav-search button {
-    padding: 10px 10px;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.search {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
 }
 
-.nav-search button:hover {
-    background-color: #777;
+.search::placeholder {
+    color: #9e9ea7;
+}
+
+.search:focus,
+input:hover {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(75, 74, 74, 0.1);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
 }
 
 /* --- */
@@ -212,35 +236,67 @@ main {
     margin: 0 5px;
 }
 
+
+/* ---------------------BOTAO------------------- */
+
 #btnShiny {
-    padding: 5px 10px;
-    background-color: #555;
-    color: #fff;
+    padding: 1em 2.4em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
     cursor: pointer;
+    outline: none;
 }
 
 #btnShiny:hover {
-    background-color: #777;
+    color: #fff;
+    transform: translateY(-7px);
+
+}
+
+#btnShiny:active {
+    transform: translateY(-1px);
 }
 
 #btnNormal {
-    padding: 5px 10px;
-    background-color: #555;
-    color: #fff;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 1em 2em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #707070;
     border: none;
-    border-radius: 5px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
     cursor: pointer;
+    outline: none;
 }
 
 #btnNormal:hover {
-    background-color: #777;
+    color: #fff;
+    transform: translateY(-7px);
 }
+
+#btnNormal:active {
+    transform: translateY(-1px);
+}
+/* ----------------------------------------------------------------- */
+
 
 #formas {
     margin: auto;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 #tipo {
