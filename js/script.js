@@ -117,14 +117,22 @@ const renderPokemonList = async () => {
 
   for (const pokemon of pokemonList) {
     const createListItem = document.createElement('li');
-    const createListImage = document.createElement('img');
     const createListName = document.createElement('span');
+
+    const createListImage = document.createElement('img');
+    const spriteInfo = await pokemonFetch(pokemon.name);
+
+    if (spriteInfo.sprites.versions['generation-v']['black-white']['animated']['front_default']) {
+      createListImage.src = spriteInfo.sprites.versions['generation-v']['black-white']['animated']['front_default'];
+    } else if (spriteInfo.sprites.front_default) {
+      createListImage.src = spriteInfo.sprites.front_default;
+    } else if (spriteInfo.sprites.other['official-artwork']['front_default']) {
+      createListImage.src = spriteInfo.sprites.other['official-artwork']['front_default'];
+    }
 
     createListName.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase();
     createListName.classList.add('pokemon-name');
-    createListImage.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.url.split('/')[6]}.gif`;
     createListImage.classList.add('pokemon-image');
-
 
     createListItem.addEventListener('click', () => {
       renderPokemon(pokemon.name);
@@ -136,7 +144,6 @@ const renderPokemonList = async () => {
     list.appendChild(createListItem);
   }
 };
-
 
 renderPokemonList();
 

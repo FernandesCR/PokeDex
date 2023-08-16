@@ -14,21 +14,33 @@ const renderPokemon = async () => {
     const pokeCardContainer = document.getElementById('pokeCardContainer');
     pokeCardContainer.innerHTML = '';
 
+
+
     for (const pokemonData of normalTypePokemon) {
         const response = await fetchPokemonData(pokemonData.pokemon.url);
         const pokemonInfo = response;
 
+        const pokemonImage = document.createElement('img');
+        const spriteInfo = pokemonInfo['sprites'];
+
+        if (spriteInfo['versions']['generation-v']['black-white']['animated']['front_default']) {
+            pokemonImage.src = spriteInfo['versions']['generation-v']['black-white']['animated']['front_default'];
+        } else if (spriteInfo['front_default']) {
+            pokemonImage.src = spriteInfo['front_default'];
+        } else if (spriteInfo['other']['official-artwork']['front_default']) {
+            pokemonImage.src = spriteInfo['other']['official-artwork']['front_default'];
+        }
+
+
+        pokemonImage.style.width = '90px';
+        pokemonImage.style.height = '90px';
+
         const pokeCard = document.createElement('div');
         pokeCard.className = 'pokeCard';
 
-        const pokemonImage = document.createElement('img');
-        pokemonImage.src = pokemonInfo['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
-        pokemonImage.style.width = '100px';
-        pokemonImage.style.height = '100px';
-
         const idPokemon = document.createElement('div');
         idPokemon.className = 'idPokemon';
-        idPokemon.textContent = pokemonInfo.id;
+        idPokemon.textContent = '#' + pokemonInfo.id;
 
         const namePokemon = document.createElement('div');
         namePokemon.className = 'namePokemon';
@@ -50,7 +62,7 @@ const renderPokemon = async () => {
         }
         pokeCardContainer.appendChild(pokeCard);
     }
-    
+
 };
 
 renderPokemon();
