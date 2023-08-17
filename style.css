@@ -15,6 +15,8 @@ body {
     font-family: 'Oxanium', cursive;
 }
 
+
+
 /* --------------------------- NavBar -------------------------- */
 
 /* NavBar */
@@ -155,18 +157,6 @@ input:hover {
 /* --- */
 
 /* ------------------------------------------------------------- */
-
-main {
-    border-radius: 13px;
-    padding: 7px;
-    width: 550px;
-    height: 580px;
-    color: #fff;
-    display: inline-block;
-    margin-top: 1%;
-    position: relative;
-}
-
 .pokemonImage {
     position: absolute;
     bottom: 28%;
@@ -192,6 +182,8 @@ main {
     background-color: #fffefe;
     color: #fff;
     position: relative;
+    margin: 0 auto;
+    margin-top: 1%;
 }
 
 #cor2 {
@@ -205,7 +197,7 @@ main {
 .typeImages {
     position: absolute;
     bottom: 15%;
-    left: 53%;
+    left: 50%;
     transform: translateX(-50%);
 }
 
@@ -218,7 +210,7 @@ main {
     background-color: #fffefe;
     color: #000000;
     position: absolute;
-    top: 57%;
+    top: 58%;
     right: 45px;
     transform: translateY(-50%);
 }
@@ -314,7 +306,7 @@ main {
     background-color: #fffefe;
     color: #000000;
     position: absolute;
-    top: 57%;
+    top: 58%;
     left: 45px;
     transform: translateY(-50%);
     overflow-y: scroll;
@@ -346,7 +338,7 @@ li.pokemon-list-item {
     display: flex;
     align-items: center;
     padding: 5px 0;
-    border-bottom: 1px solid #1a1818;
+    border-bottom: 1px solid #f0f0f0;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -369,18 +361,19 @@ li.pokemon-list-item:hover {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
 
     .nav-logo {
-        margin: 20px 0;
+        text-align: left;
+        margin-right: auto;
+        margin-left: 10px;
+        position: relative;
+        left: auto;
     }
 
     .nav-menu {
-        flex-direction: row;
         justify-content: center;
+        max-width: 100%; /* Defina o limite máximo da largura */
+        overflow: hidden;
     }
 
     .nav-search {
@@ -421,23 +414,24 @@ li.pokemon-list-item:hover {
 
     #cor2 {
         width: 110%;
+        height: 47%;
+    }
+
+    #cor {
+        width: 90%;
+        height: 450px;
     }
 
 
     .typeImages {
         bottom: 10%;
         width: 100%;
-        max-width: 50%;
-        
+        max-width: 70%;
     }
 
     section {
         display: flex;
         flex-direction: column;
-    }
-
-    main {
-        order: 2;
     }
 
     .pokemonImage {
@@ -448,19 +442,20 @@ li.pokemon-list-item:hover {
 
     #container {
         order: 3;
-        width: 100%;
-        max-width: 80%;
+        width: 90%;
         margin-top: 300px;
         margin-left: 15%;
         position: relative;
     }
-
     #listaPokemon {
         order: 4;
+        height: 250px;
         width: 100%;
         max-width: 80%;
-        margin-top: 100px;
         position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         overflow-y: auto;
     }
 }

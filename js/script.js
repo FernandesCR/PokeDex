@@ -156,7 +156,7 @@ const renderTypeImages = (types) => {
     typeImage.src = `imagens/tipos/Pokemon_Type_Icon_${type}.png`;
     typeImage.style.width = '60px';
     typeImage.style.height = '60px';
-    typeImage.style.marginRight = '30px';
+    typeImage.style.margin = '10px';
     typeImagesContainer.appendChild(typeImage);
   });
 };
