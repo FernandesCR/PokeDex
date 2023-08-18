@@ -28,7 +28,7 @@ const renderPokemon = async () => {
 
         const idPokemon = document.createElement('div');
         idPokemon.className = 'idPokemon';
-        idPokemon.textContent = pokemonInfo.id;
+        idPokemon.textContent = '#' + pokemonInfo.id;
 
         const namePokemon = document.createElement('div');
         namePokemon.className = 'namePokemon';
