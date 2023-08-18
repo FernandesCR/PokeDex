@@ -8,6 +8,7 @@ const btnNormal = document.getElementById('btnNormal');
 const input = document.querySelector('.search');
 const form = document.querySelector('.form');
 
+
 const colors = {
   grass: '#63BB5B',
   fire: '#FF9C54',
