@@ -175,6 +175,7 @@ const renderTypeImagesNames = (type) => {
   });
 }
 
+
 renderPokemon('1')
 
 form.addEventListener('submit', (event) => {
