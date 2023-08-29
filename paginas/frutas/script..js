@@ -40,5 +40,11 @@ const renderBerrys = async () => {
         }
     }
 };
+const hideLoadingOverlay = () => {
+    const loadingOverlay = document.querySelector('.loading-overlay');
+    loadingOverlay.style.display = 'none';
+};
 
-renderBerrys();
+renderBerrys().then(() => {
+    hideLoadingOverlay();
+});

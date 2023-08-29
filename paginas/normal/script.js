@@ -65,4 +65,11 @@ const renderPokemon = async () => {
 
 };
 
-renderPokemon();
+const hideLoadingOverlay = () => {
+    const loadingOverlay = document.querySelector('.loading-overlay');
+    loadingOverlay.style.display = 'none';
+};
+
+renderPokemon().then(() => {
+    hideLoadingOverlay();
+});
