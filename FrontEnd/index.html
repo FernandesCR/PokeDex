@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../FrontEnd/imagens/favicon.ico" type="image/png">
+    <title>PokeDex</title>
+</head>
+
+<body>
+
+    <section name="navBar">
+        <div>
+            <nav class="navbar">
+                <div class="nav-logo">
+                    <a href="index.html"><img src="../FrontEnd/imagens/pokebola.gif" alt="Logo"></a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">PokeDex</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tipos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/FrontEnd/paginas/normal/index.html">Normal</a></li>
+                            <li><a href="/FrontEnd/paginas/fighting/index.html">Fighting</a></li>
+                            <li><a href="/FrontEnd/paginas/flying/index.html">Flying</a></li>
+                            <li><a href="/FrontEnd/paginas/poison/index.html">Poison</a></li>
+                            <li><a href="/FrontEnd/paginas/ground/index.html">Ground</a></li>
+                            <li><a href="/FrontEnd/paginas/rock/index.html">Rock</a></li>
+                            <li><a href="/FrontEnd/paginas/bug/index.html">Bug</a></li>
+                            <li><a href="/FrontEnd/paginas/ghost/index.html">Ghost</a></li>
+                            <li><a href="/FrontEnd/paginas/steel/index.html">Steel</a></li>
+                            <li><a href="/FrontEnd/paginas/fire/index.html">Fire</a></li>
+                            <li><a href="/FrontEnd/paginas/water/index.html">Water</a></li>
+                            <li><a href="/FrontEnd/paginas/grass/index.html">Grass</a></li>
+                            <li><a href="/FrontEnd/paginas/electric/index.html">Electric</a></li>
+                            <li><a href="/FrontEnd/paginas/psychic/index.html">Psychic</a></li>
+                            <li><a href="/FrontEnd/paginas/ice/index.html">Ice</a></li>
+                            <li><a href="/FrontEnd/paginas/dragon/index.html">Dragon</a></li>
+                            <li><a href="/FrontEnd/paginas/dark/index.html">Dark</a></li>
+                            <li><a href="/FrontEnd/paginas/fairy/index.html">Fairy</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Itens</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/frontend/paginas/pokebolas/index.html">PokeBolas</a></li>
+                            <li><a href="/frontend/paginas/frutas/index.html">berrys</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <li id="loginEdit"><a href="/FrontEnd/paginas/login/index.html">Login</a></li>
+            </nav>
+        </div>
+    </section>
+
+    <section id="blocoCentral">
+
+        <section>
+            <div class="nav-search">
+                <div class="group">
+                    <form class="form">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                            <g>
+                                <path
+                                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                                </path>
+                            </g>
+                        </svg>
+                        <input placeholder="Search" type="search" class="search">
+                    </form>
+                </div>
+            </div>
+            <div id="cor">
+                <div id="cor2"></div>
+                <img src="" alt="pokemon" class="pokemonImage">
+                <h1 class="pokemonDados"></h1>
+                <div class="typeImages"></div>
+            </div>
+        </section>
+
+        <section>
+
+            <div id="container">
+                <div id="NameBloco">
+                    <h1 class="pokemonNumber"></h1> -
+                    <h1 class="pokemonName"></h1>
+                </div>
+                <div>
+                    <div id="tipo">
+                        <h1 id="tipos"></h1>
+                        <div class="typeImagesName"></div>
+                    </div>
+                    <div id="formas">
+                        <h1 id="formasTitulo">Formas</h1>
+                        <button id="btnShiny">Shiny</button>
+                        <button id="btnNormal">Normal</button>
+                    </div>
+                </div>
+
+        </section>
+
+        <section <div id="listaPokemon">
+            <ul id="pokemonList">Lista Pokemon</ul>
+            </div>
+        </section>
+    </section>
+
+</body>
+
+<footer>Projeto PokeDex @Fernandes</footer>
+
+<script src="js/script.js"></script>
+
+</html>
